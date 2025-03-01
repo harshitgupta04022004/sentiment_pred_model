@@ -1,0 +1,115 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* General Body Styling with Animated Background */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  animation: backgroundAnimation 10s infinite alternate;
+}
+
+/* Background Color Animation */
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  }
+  100% {
+    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+  }
+}
+
+/* Container Styling */
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeInScale 1s forwards;
+}
+
+/* Title Styling with Animation */
+.animate-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  opacity: 0;
+  animation: fadeInSlideDown 1s forwards 0.5s;
+}
+
+/* Text Styling with Animation */
+.animate-text {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.8s;
+}
+
+/* Link/Button Styling with Animation */
+.animate-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  opacity: 0;
+  animation: fadeIn 1s forwards 1s, pulse 2s infinite 1.5s;
+}
+
+.animate-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Keyframe Definitions for Animations */
+@keyframes fadeInSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulse Animation for the Button */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}

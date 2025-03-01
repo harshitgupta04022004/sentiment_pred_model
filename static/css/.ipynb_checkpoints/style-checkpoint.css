@@ -1,0 +1,154 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* General Body Styling with Animated Background */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  animation: backgroundAnimation 10s infinite alternate;
+}
+
+/* Background Color Animation */
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  }
+  100% {
+    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+  }
+}
+
+/* Title Animation: Fade In & Slide Down */
+.animate-title {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInSlideDown 1s forwards;
+  animation-delay: 0.5s;
+}
+
+/* Subtitle Animation: Fade In & Slide Up */
+.animate-subtitle {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 1s forwards;
+  animation-delay: 0.8s;
+}
+
+/* Card Animation: Fade In & Scale Up */
+.animate-card {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInScale 1s forwards;
+  animation-delay: 1s;
+}
+
+/* Input Animation: Fade In */
+.animate-input {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1.2s;
+}
+
+/* Button Animation: Fade In with Pulse */
+.animate-btn {
+  opacity: 0;
+  animation: fadeIn 1s forwards, pulse 2s infinite;
+  animation-delay: 1.4s;
+}
+
+/* Keyframe Definitions */
+@keyframes fadeInSlideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Pulse Animation for Button */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+/* Card Styling */
+.custom-card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Label Styling */
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* Input & Textarea Styling */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Button Styling */
+.custom-btn {
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .custom-card {
+    margin: 0 10px;
+  }
+}

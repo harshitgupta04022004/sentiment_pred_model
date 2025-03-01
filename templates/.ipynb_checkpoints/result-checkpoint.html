@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <!-- Link to the custom result CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+  <!-- Optional: Include Google Fonts if not already loaded -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="animate-title">Prediction Result</h1>
+    <p class="animate-text"><strong>Task:</strong> {{ task }}</p>
+    <p class="animate-text"><strong>Input Text:</strong> {{ text }}</p>
+    <p class="animate-text"><strong>Result:</strong> {{ result }}</p>
+    <a href="{{ url_for('index') }}" class="animate-btn">Go back</a>
+  </div>
+</body>
+</html>
